@@ -26,6 +26,9 @@ object Application extends Controller with Secured {
     Ok(html.list(bugs))
   }
 
+  def edit = NotImplemented
+  // todo:2012-12-26:ambantis:Implement functionality to view a bug's details and edit it.
+
 
 
 //  def user = withUser { user => implicit request =>

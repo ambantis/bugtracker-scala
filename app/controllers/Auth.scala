@@ -43,6 +43,16 @@ object Auth extends Controller {
       user => Redirect(routes.Application.list()).withSession(Security.username -> user._1)
       )
   }
+
+  def sendEmail = NotImplemented
+  // todo:2012-12-26:ambantis:Implement mailer plugin
+  // https://github.com/typesafehub/play-plugins/tree/master/mailer
+
+  def verifyEmail(): Boolean = {
+    // todo:2012-12-26:ambantis:Validate email via email when new user sets up an account.
+    // cf. https://github.com/yesnault/Play20StartApp &
+    false
+  }
 }
 
 import play.api.mvc.Security

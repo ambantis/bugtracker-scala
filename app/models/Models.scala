@@ -7,6 +7,10 @@ import org.squeryl.dsl._
 import org.squeryl.annotations.Column
 
 
+// todo:2012-12-26:ambantis:Multiple project functionality
+// enable functionality for working with multiple projects. A user has a list of projects that s/he owns.
+// a project can be administered by the owner and has users who have various read/write privileges.
+
 case class Role(@Column("role_id") roleId: Int,
                 @Column("role_name") roleName: String) extends KeyedEntity[Int] {
   override def id = roleId
