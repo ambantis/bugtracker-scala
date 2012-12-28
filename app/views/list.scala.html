@@ -11,36 +11,16 @@
 <body>
 
   <div class="container-fluid">
-
-    @* todo:2012-12-26:ambantis:Implement default navbar so that it has meaningful options, e.g., About Us, Pricing *@
-    <div class="navbar">
-      <div class="navbar-inner">
-        <a class="brand" href="#">BugTracker</a>
-        <ul class="nav">
-          <li class="divider-vertical"></li>
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-        <form class="navbar-form pull-right" action="#">
-          <input class="span2" type="text" placeholder="user name">
-          <input class="span2" type="password" placeholder="password">
-          <button type="submit" class="btn">Sign in</button>
-        </form>
-      </div>
-    </div>
+    @header()
 
     <div class="row-fluid">
       <div class="span2">
-      <!--sidebar content here-->
-      @* todo:2012-12-26:ambantis:Implement sidebar content that includes navigation features to other projects *@
-        <h3>You're content here</h3>
-        <p>some links that are specific to the logged in user will go on this side.</p>
+        @navigation()
       </div>
-
 
       <div class="span10">
       <!-- Body content here -->
-        <h2>Here is your bug list</h2>
+        <h2>Here is your open bug list</h2>
         <br>
         <br>
         <table class="table table-striped table-bordered" id="bug-list">
@@ -50,7 +30,6 @@
               <th>Assignee</th>
               <th>Open Date</th>
               <th>Due Date</th>
-              <th>Close Date</th>
               <th>Summary</th>
             </tr>
           </thead>
@@ -61,7 +40,6 @@
                 <th>@bug.assignee</th>
                 <th>@bug.openDate</th>
                 <th>@bug.dueDate</th>
-                <th>@bug.closeDate</th>
                 <th>@bug.summary</th>
               </tr>
             }
