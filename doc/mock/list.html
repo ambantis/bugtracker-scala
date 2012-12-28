@@ -2,15 +2,20 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
+  <title></title>
   <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css" media="all">
   <link rel="stylesheet" type="text/css" href="../../public/css/DT_bootstrap.css" media="all">
-  <title></title>
+  <style type="text/css">
+    .span2 {
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
 
 <div class="container-fluid">
 
-  <div class="navbar">
+  <header class="navbar">
     <div class="navbar-inner">
       <a class="brand" href="#">BugTracker</a>
       <ul class="nav">
@@ -18,19 +23,44 @@
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul>
-      <form class="navbar-form pull-right" action="#">
-        <input class="span2" type="text" placeholder="user name">
-        <input class="span2" type="password" placeholder="password">
-        <button type="submit" class="btn">Sign in</button>
+
+      <form class="navbar-search pull-left">
+        <input type="text" class="search-query" placeholder="Search">
       </form>
+
+      <ul class="nav pull-right">
+        <li>
+          <p class="navbar-text pull-right">Logged in as <a href="#" class="navbar-link">ambantis</a></p>
+        </li>
+        <li class="divider-vertical"></li>
+        <li>
+          <form class="navbar-form" action="#" ><button class="btn">Log out</button></form>
+        </li>
+
+
+      </ul>
+
+
+
+
     </div>
-  </div>
+  </header>
 
   <div class="row-fluid">
     <div class="span2">
-      <!--sidebar content here-->
-      <h3>You're content here</h3>
-      <p>some links that are specific to the logged in user will go on this side.</p>
+      <ul class="nav nav-list">
+        <li class="nav-header">List header</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li><a href="#">Applications</a></li>
+      </ul>
+      <ul class="nav nav-list">
+        <li class="nav-header">Another list header</li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Help</a></li>
+      </ul>
     </div>
 
 
@@ -78,17 +108,9 @@
         </tbody>
       </table>
     </div>
-
-
   </div>
 
 </div>
-
-
-
-
-
-
 
 <script type="text/javascript" src="../../public/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="../../public/js/jquery.dataTables.min.js"></script>
