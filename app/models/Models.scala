@@ -43,8 +43,8 @@ case class Detail(@Column("bug_id") bugId: Int,
 }
 
 object MyDB extends Schema {
-  val rolesTable = table[Role]("role")
-  val usersTable = table[User]("user")
+  val rolesTable = table[Role]("roles")
+  val usersTable = table[User]("users")
   val bugsTable = table[Bug]("bug")
   val detailsTable = table[Detail]("detail")
 

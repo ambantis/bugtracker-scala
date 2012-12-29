@@ -1,7 +1,3 @@
-# --- First database schema
-
-# --- !Ups
-
 CREATE TABLE roles(
   role_id       VARCHAR (3) PRIMARY KEY,
   role_name     VARCHAR (50) NOT NULL
@@ -77,10 +73,3 @@ INSERT INTO detail (bug_id, det_id, det_date, user_id, comment)
   VALUES (3, 2, '2012-12-03', 'monty', $$Assigned to lisa$$);
 INSERT INTO detail (bug_id, det_id, det_date, user_id, comment)
   VALUES (4, 2, '2012-12-03', 'monty', $$Assigned to lisa$$);
-
-# --- !Downs
-
-DROP TABLE IF EXISTS detail;
-DROP TABLE IF EXISTS bug;
-DROP TABLE IF EXISTS users;
-DROP TABLE  IF EXISTS roles;
