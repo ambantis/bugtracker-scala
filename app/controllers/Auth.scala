@@ -28,7 +28,7 @@ object Auth extends Controller {
   )
 
   def login = Action { implicit request =>
-    Ok(html.login(loginForm))
+    Ok(html.index(loginForm))
   }
 
   def logout = Action { implicit request =>
